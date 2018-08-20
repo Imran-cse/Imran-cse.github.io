@@ -1,16 +1,15 @@
 {
 	"personalInfo": {
 		"myimg": "image.jpg",
-		"fname": "Shubham",
-		"mname": "Parashram",
-		"lname": "Sawant",
-		"nick":"moghya",
+		"fname": "Imran",
+		"mname": "",
+		"lname": "Hossain",
+		"nick":"imran",
 		"address": {
-			"list": ["Gupta Layout, Mahakali road, Washim, District-Washim, Maharashtra, India 444505 ",
-				"'OM' Jaihind colony, Vishrambag, Sangli District-Sangli, Maharashtra, India 416415"
+			"list": ["Khulna University, Khulna, Bangladesh - 9208 "
 			]
 		},
-		"email": "sawantshubham571@gmail.com",
+		"email": "imran.cse.ku@gmail.com",
 		"mob": "+919881464434"
 	},
 	"educations": [
