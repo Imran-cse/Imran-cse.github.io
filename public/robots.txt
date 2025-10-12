@@ -1,0 +1,16 @@
+# robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://imran-hossain.dev/sitemap.xml
+
+# Block specific paths if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow search engines to crawl CSS and JS files
+User-agent: *
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js

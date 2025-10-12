@@ -5,7 +5,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://imran-cse.github.io",
+  site: "https://imran-hossain.dev",
   base: "/",
   integrations: [react()],
   vite: {
@@ -13,10 +13,13 @@ export default defineConfig({
   },
   build: {
     assets: "assets",
+    inlineStylesheets: "auto",
   },
   compressHTML: true,
   prefetch: {
     prefetchAll: true,
     defaultStrategy: "viewport",
   },
+  // Optimize build for better SEO
+  output: "static",
 });
