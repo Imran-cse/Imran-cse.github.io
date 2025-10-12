@@ -1,0 +1,124 @@
+---
+// Cursor Spotlight Effect - Exact Brittany Chiang implementation
+---
+
+<div
+  id="cursor-spotlight"
+  class="pointer-events-none fixed inset-0 z-[2] transition-opacity duration-500"
+>
+</div>
+
+<script>
+  // Cursor spotlight effect - matching Brittany's exact implementation
+  function initCursorSpotlight() {
+    const spotlight = document.getElementById("cursor-spotlight");
+    if (!spotlight) return;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let animationId: number | null = null;
+
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+
+      animationId = requestAnimationFrame(updateSpotlight);
+    });
+
+    // Update spotlight position - Brittany's exact multi-layer gradient
+    function updateSpotlight() {
+      if (spotlight) {
+        // Multi-layered radial gradient for more realistic lighting effect
+        const gradient = `
+          radial-gradient(circle 1000px at ${mouseX}px ${mouseY}px, 
+            rgba(94, 234, 212, 0.08) 0%, 
+            rgba(94, 234, 212, 0.04) 25%, 
+            rgba(94, 234, 212, 0.02) 50%, 
+            transparent 70%
+          )
+        `;
+        spotlight.style.background = gradient;
+      }
+      animationId = null;
+    }
+
+    // Smooth fade transitions
+    document.addEventListener("mouseleave", () => {
+      if (spotlight) {
+        spotlight.style.opacity = "0";
+      }
+    });
+
+    document.addEventListener("mouseenter", (e) => {
+      if (spotlight) {
+        spotlight.style.opacity = "1";
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (animationId) cancelAnimationFrame(animationId);
+        animationId = requestAnimationFrame(updateSpotlight);
+      }
+    });
+
+    // Handle window events
+    window.addEventListener("resize", () => {
+      if (animationId) cancelAnimationFrame(animationId);
+      animationId = requestAnimationFrame(updateSpotlight);
+    });
+
+    // Initial setup
+    updateSpotlight();
+  }
+
+  // Initialize
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCursorSpotlight);
+  } else {
+    initCursorSpotlight();
+  }
+
+  // Handle navigation
+  document.addEventListener("astro:page-load", initCursorSpotlight);
+  document.addEventListener("astro:after-swap", initCursorSpotlight);
+</script>
+
+<style>
+  #cursor-spotlight {
+    background: transparent;
+    will-change: background, opacity;
+    opacity: 1;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Performance optimizations */
+  #cursor-spotlight {
+    contain: layout style paint;
+    isolation: isolate;
+  }
+
+  /* Hide on touch devices and mobile - exact Brittany breakpoints */
+  @media (hover: none) and (pointer: coarse) {
+    #cursor-spotlight {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    #cursor-spotlight {
+      display: none !important;
+    }
+  }
+
+  /* Ensure proper rendering on high-DPI displays */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #cursor-spotlight {
+      transform: translateZ(0) scale(1);
+    }
+  }
+</style>

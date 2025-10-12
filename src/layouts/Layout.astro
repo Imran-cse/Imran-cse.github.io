@@ -6,6 +6,9 @@ export interface Props {
 
 const { title, description = "Imran Hossain - Software Engineer Portfolio" } =
   Astro.props;
+
+// Import the cursor spotlight component
+import CursorSpotlight from "../components/CursorSpotlight.astro";
 ---
 
 <!doctype html>
@@ -35,6 +38,9 @@ const { title, description = "Imran Hossain - Software Engineer Portfolio" } =
     <meta name="msapplication-TileColor" content="#6366f1" />
   </head>
   <body class="theme-transition antialiased">
+    <!-- Cursor Spotlight Effect -->
+    <CursorSpotlight />
+
     <slot />
 
     <!-- Theme Toggle Script -->
