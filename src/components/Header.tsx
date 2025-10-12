@@ -5,7 +5,14 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "experience", "projects"];
+      const sections = [
+        "about",
+        "experience",
+        "skills",
+        "education",
+        "publications",
+        "projects",
+      ];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {

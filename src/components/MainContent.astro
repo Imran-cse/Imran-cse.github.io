@@ -1,12 +1,18 @@
 ---
 import About from "./About.astro";
+import Education from "./Education.astro";
 import Experience from "./Experience.astro";
 import Projects from "./Projects";
+import Publications from "./Publications.astro";
+import Skills from "./Skills.astro";
 ---
 
 <!-- Right side - Main content area -->
 <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
   <About />
   <Experience />
+  <Skills />
+  <Education />
+  <Publications />
   <Projects client:load />
 </main>

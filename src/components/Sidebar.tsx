@@ -12,7 +12,14 @@ const Sidebar: React.FC = () => {
     };
 
     const handleScroll = () => {
-      const sections = ["about", "experience", "projects", "contact"];
+      const sections = [
+        "about",
+        "experience",
+        "skills",
+        "education",
+        "publications",
+        "projects",
+      ];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -91,6 +98,9 @@ const Sidebar: React.FC = () => {
   const navLinks = [
     { id: "about", label: "About" },
     { id: "experience", label: "Experience" },
+    { id: "skills", label: "Skills" },
+    { id: "education", label: "Education" },
+    { id: "publications", label: "Publications" },
     { id: "projects", label: "Projects" },
   ];
 

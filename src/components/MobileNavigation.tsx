@@ -83,6 +83,27 @@ const MobileNavigation: React.FC = () => {
               Experience
             </a>
             <a
+              href="#skills"
+              className="text-lg font-medium text-slate-300 hover:text-teal-300"
+              onClick={closeMenu}
+            >
+              Skills
+            </a>
+            <a
+              href="#education"
+              className="text-lg font-medium text-slate-300 hover:text-teal-300"
+              onClick={closeMenu}
+            >
+              Education
+            </a>
+            <a
+              href="#publications"
+              className="text-lg font-medium text-slate-300 hover:text-teal-300"
+              onClick={closeMenu}
+            >
+              Publications
+            </a>
+            <a
               href="#projects"
               className="text-lg font-medium text-slate-300 hover:text-teal-300"
               onClick={closeMenu}
