@@ -1,12 +1,13 @@
 ---
 // Social media links component
+import { EMAIL, SOCIAL_MEDIA } from "../libs/constants";
 ---
 
 <ul class="ml-1 mt-8 flex items-center" aria-label="Social media">
   <li class="mr-5 text-xs shrink-0">
     <a
       class="block hover:text-slate-200"
-      href="https://github.com/Imran-cse"
+      href={SOCIAL_MEDIA.github}
       target="_blank"
       rel="noreferrer noopener"
       aria-label="GitHub (opens in a new tab)"
@@ -29,7 +30,7 @@
   <li class="mr-5 text-xs shrink-0">
     <a
       class="block hover:text-slate-200"
-      href="https://www.linkedin.com/in/imran-hossain-cse/"
+      href={SOCIAL_MEDIA.linkedin}
       target="_blank"
       rel="noreferrer noopener"
       aria-label="LinkedIn (opens in a new tab)"
@@ -52,7 +53,7 @@
   <li class="mr-5 text-xs shrink-0">
     <a
       class="block hover:text-slate-200"
-      href="mailto:imran.cse21@gmail.com"
+      href={`mailto:${EMAIL}`}
       target="_blank"
       rel="noreferrer noopener"
       aria-label="Email (opens in a new tab)"

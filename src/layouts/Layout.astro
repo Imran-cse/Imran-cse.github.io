@@ -1,4 +1,5 @@
 ---
+import { EMAIL, SOCIAL_MEDIA } from "../libs/constants";
 export interface Props {
   title: string;
   description?: string;
@@ -27,11 +28,7 @@ const structuredData = {
   name: "Imran Hossain",
   url: "https://imran-hossain.dev",
   image: "https://imran-hossain.dev/profile-image.jpg",
-  sameAs: [
-    "https://github.com/imran-cse",
-    "https://linkedin.com/in/imran1503",
-    "https://twitter.com/imran_cse",
-  ],
+  sameAs: [SOCIAL_MEDIA.github, SOCIAL_MEDIA.linkedin, SOCIAL_MEDIA.twitter],
   jobTitle: "Software Engineer",
   worksFor: {
     "@type": "Organization",
