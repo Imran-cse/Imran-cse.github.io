@@ -1,168 +1,170 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* Brittany Chiang Exact Color Palette */
-:root {
-  --bg-primary: #0f172a; /* slate-900 */
-  --bg-secondary: #1e293b; /* slate-800 */
-  --bg-tertiary: #334155; /* slate-700 */
-  --text-primary: #f1f5f9; /* slate-100 */
-  --text-secondary: #94a3b8; /* slate-400 */
-  --text-muted: #64748b; /* slate-500 */
-  --accent-primary: #5eead4; /* teal-300 - cyan accent */
-  --accent-hover: #2dd4bf; /* teal-400 */
-  --border-light: #334155; /* slate-700 */
-  --shadow-md: rgba(15, 23, 42, 0.8); /* slate-900 with opacity */
-  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
+@layer base {
+  /* Brittany Chiang Exact Color Palette */
+  :root {
+    --bg-primary: #0f172a; /* slate-900 */
+    --bg-secondary: #1e293b; /* slate-800 */
+    --bg-tertiary: #334155; /* slate-700 */
+    --text-primary: #f1f5f9; /* slate-100 */
+    --text-secondary: #94a3b8; /* slate-400 */
+    --text-muted: #64748b; /* slate-500 */
+    --accent-primary: #5eead4; /* teal-300 - cyan accent */
+    --accent-hover: #2dd4bf; /* teal-400 */
+    --border-light: #334155; /* slate-700 */
+    --shadow-md: rgba(15, 23, 42, 0.8); /* slate-900 with opacity */
+    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
 
-[data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #e2e8f0;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  --accent-primary: #0891b2;
-  --accent-hover: #0e7490;
-  --border-light: #e2e8f0;
-  --shadow-md: rgba(0, 0, 0, 0.1);
-}
+  [data-theme="light"] {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --accent-primary: #0891b2;
+    --accent-hover: #0e7490;
+    --border-light: #e2e8f0;
+    --shadow-md: rgba(0, 0, 0, 0.1);
+  }
 
-/* Base Styles - Matching Brittany's typography */
-html {
-  scroll-behavior: smooth;
-  transition: var(--transition);
-}
+  /* Base Styles - Matching Brittany's typography */
+  html {
+    scroll-behavior: smooth;
+    transition: var(--transition);
+  }
 
-body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-secondary);
-  transition: var(--transition);
-  line-height: 1.6;
-  font-weight: 400;
-  font-size: 16px;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    transition: var(--transition);
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 16px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-/* Typography - Exact Brittany Chiang styling */
-h1 {
-  font-size: clamp(40px, 8vw, 80px);
-  font-weight: 600;
-  line-height: 1.1;
-  margin: 0;
-  color: var(--text-primary);
-}
-
-h2 {
-  font-size: clamp(26px, 5vw, 32px);
-  font-weight: 600;
-  line-height: 1.1;
-  margin: 0 0 10px 0;
-  color: var(--text-primary);
-}
-
-h3 {
-  font-size: clamp(20px, 3vw, 28px);
-  font-weight: 500;
-  line-height: 1.3;
-  margin: 0 0 10px 0;
-  color: var(--text-primary);
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0 0 15px 0;
-  color: var(--text-secondary);
-}
-
-a {
-  color: var(--accent-primary);
-  text-decoration: none;
-  transition: var(--transition);
-  display: inline-block;
-  position: relative;
-}
-
-a:hover {
-  color: var(--accent-hover);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--bg-tertiary);
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-primary);
-}
-
-/* Brittany Chiang specific styles */
-.group:hover .nav-indicator {
-  width: 4rem;
-  background-color: var(--text-primary);
-}
-
-.group:hover .nav-text {
-  color: var(--text-primary);
-}
-
-/* Section styling */
-section {
-  margin-bottom: 6rem;
-}
-
-section:last-child {
-  margin-bottom: 0;
-}
-
-/* Focus styles */
-a:focus,
-button:focus {
-  outline: 2px solid var(--accent-primary);
-  outline-offset: 2px;
-}
-
-/* Screen reader only text */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Responsive text sizing */
-@media (max-width: 768px) {
+  /* Typography - Exact Brittany Chiang styling */
   h1 {
-    font-size: clamp(28px, 5vw, 40px);
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--text-primary);
   }
 
   h2 {
-    font-size: clamp(22px, 4vw, 28px);
+    font-size: clamp(26px, 5vw, 32px);
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0 0 10px 0;
+    color: var(--text-primary);
   }
 
+  h3 {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 10px 0;
+    color: var(--text-primary);
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+    color: var(--text-secondary);
+  }
+
+  a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    position: relative;
+  }
+
+  a:hover {
+    color: var(--accent-hover);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
+  }
+
+  /* Brittany Chiang specific styles */
+  .group:hover .nav-indicator {
+    width: 4rem;
+    background-color: var(--text-primary);
+  }
+
+  .group:hover .nav-text {
+    color: var(--text-primary);
+  }
+
+  /* Section styling */
   section {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  section:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Focus styles */
+  a:focus,
+  button:focus {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+  }
+
+  /* Screen reader only text */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Responsive text sizing */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+    }
+
+    h2 {
+      font-size: clamp(22px, 4vw, 28px);
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
   }
 }
