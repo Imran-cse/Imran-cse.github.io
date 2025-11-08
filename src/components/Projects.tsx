@@ -23,14 +23,14 @@ const Projects: React.FC = () => {
                 <h3>
                   <a
                     className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-                    href="https://spotify-course-demo.com"
+                    href="https://play.google.com/store/apps/details?id=com.lightyeartech.prioritynote"
                     target="_blank"
                     rel="noreferrer noopener"
-                    aria-label="Build a Spotify Connected App (opens in a new tab)"
+                    aria-label="Priority Note (opens in a new tab)"
                   >
                     <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                     <span>
-                      Build a Spotify Connected App
+                      Priority Note
                       <span className="inline-block">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -51,10 +51,11 @@ const Projects: React.FC = () => {
                 </h3>
 
                 <p className="mt-2 text-sm leading-normal">
-                  Video course that teaches how to build a web app with the
-                  Spotify Web API. Topics covered include the principles of REST
-                  APIs, user auth flows, Node, Express, React, Styled
-                  Components, and more.
+                  A minimalist productivity app that combines note-taking with
+                  prioritized to-do lists. Capture ideas and organize tasks with
+                  a simple visual priority system (High, Medium, Low). Perfect
+                  for students, professionals, and anyone who wants to turn
+                  ideas into focused action.
                 </p>
 
                 <ul
@@ -63,22 +64,17 @@ const Projects: React.FC = () => {
                 >
                   <li className="mr-1.5 mt-2">
                     <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                      React
+                      Android/iOS
                     </div>
                   </li>
                   <li className="mr-1.5 mt-2">
                     <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                      Express
+                      React Native
                     </div>
                   </li>
                   <li className="mr-1.5 mt-2">
                     <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                      Spotify API
-                    </div>
-                  </li>
-                  <li className="mr-1.5 mt-2">
-                    <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                      Node.js
+                      Expo
                     </div>
                   </li>
                 </ul>
@@ -87,13 +83,13 @@ const Projects: React.FC = () => {
               <div className="z-10 sm:order-1 sm:col-span-2">
                 <div className="relative">
                   <a
-                    href="https://spotify-course-demo.com"
+                    href="https://play.google.com/store/apps/details?id=com.lightyeartech.prioritynote"
                     target="_blank"
                     rel="noreferrer noopener"
                     className="block overflow-hidden rounded border-2 border-slate-200/10 bg-slate-200/5 hover:border-slate-200/30 focus:border-slate-200/30 group-hover:border-slate-200/30 sm:order-1 transition"
                   >
                     <div className="flex h-48 w-full items-center justify-center bg-gradient-to-br from-teal-400/20 to-blue-500/20">
-                      <span className="text-4xl">🎵</span>
+                      <span className="text-4xl">📝</span>
                     </div>
                   </a>
                 </div>
