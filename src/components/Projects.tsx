@@ -98,7 +98,8 @@ const Projects: React.FC = () => {
           </li>
         </ul>
 
-        <div className="mt-12">
+        {/* {TODO: Add full project archive link} */}
+        {/* <div className="mt-12">
           <a
             className="inline-flex items-baseline font-semibold leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
             href="/archive"
@@ -119,7 +120,7 @@ const Projects: React.FC = () => {
               ></path>
             </svg>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
